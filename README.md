@@ -25,7 +25,7 @@ Requirements & resource planning
 
 9- What to screenshot / demo for reviewers
 
-# 1 — Requirements & resource planning
+# 1 Requirements & resource planning
 
 Minimum host (toy lab):
 Linux / macOS / Windows (WSL2) host with Docker & Docker Compose
@@ -37,7 +37,7 @@ Recommended (comfortable):
 Optional: Packer + Ansible for reproducible VM images
 Budgeting tip: plan for snapshots and PCAPs; storage fills faster than your willpower.
 
-# 2 — Topology & naming conventions:
+# 2 Topology & naming conventions:
 
 Keep names human and IPs private and non-overlapping with your network.
 
@@ -57,9 +57,6 @@ File & image naming:
 
     Artefacts: YYYYMMDD_experiment_slug_type.ext e.g. 20251112_weblab_pcap.pcap
 
-Picture placeholder:
-![Topology diagram: Bastion ↔ Attacker ↔ Targets ↔ Monitoring](./docs/images/topology.png)
-
 # 3-  Component breakdown (what each role does & why)
 
 Bastion , single control plane
@@ -67,24 +64,24 @@ Bastion , single control plane
 Purpose: centralize control, coordinate snapshots, host a small status UI, and act as the only place where controlled egress (if ever) is allowed.
 Why: one place to check logs  fewer mysteries. If something goes sideways, you don’t hunt through twelve containers like it’s a scavenger hunt.
 Minimal tech: static server (Caddy/Nginx) for status + small control scripts on host.
-Picture placeholder: ![Bastion dashboard mockup](./docs/images/bastion.png)
+Picture placeholder: 
 
 Final checklist & first-run plan
 
 Closing thoughts 
 
-# Attacker — minimal & auditable
+# Attacker , minimal & auditable
 
 Purpose: workstation for analysis. Teach network/OS reasoning, not button-mashing.
 Toolset (example, with justification):
 
-tcpdump — packet capture learning
+tcpdump / packet capture learning
 
-curl / httpie — HTTP basics
+curl / httpie - HTTP basics
 
-python3 — parsing logs / quick scripts
+python3 / parsing logs / quick scripts
 
-git — versioning notes & artifacts
+git - versioning notes & artifacts
 
 Run as a non-root user. Document why each tool exists in attacker-setup.md. This shows maturity , and reviewers like maturity.
 
@@ -291,6 +288,6 @@ Targets matrix (document)
 Monitoring Grafana panel (logs + simple graph)
 
 
-# 12 — Closing 
+# 12 Closing 
 
 If you simply downloaded a Kali ISO and called it a “lab,” you’ve done the Internet a favor: it now has one less overly dramatic VM lying around. If you follow this guide, you’ll have something better: a reproducible, auditable, ethical lab that tells a story , and can pass a faculty review or a recruiter’s sniff test. Build with care, document like a scientist, and when in doubt: snapshot, then brag about the snapshot.
