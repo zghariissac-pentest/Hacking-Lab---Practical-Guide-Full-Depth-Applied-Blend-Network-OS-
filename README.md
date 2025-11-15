@@ -225,7 +225,7 @@ PCAPs: 14–30 days depending on storage.
 
 Add an automated cron job on the bastion/host that prunes artefacts older than retention thresholds. Always document the policy.
 
-# 7 — Observability & artefacts (what to collect)
+# 7 Observability & artefacts (what to collect)
 
 For each experiment, create artifacts/<YYYYMMDD_slug>/ and store:
 
@@ -243,11 +243,11 @@ snapshot-id.txt (snapshot reference)
 
 Index idea: artifacts/index.md with executive summaries linking to each artefact.
 
-# 8 — Experiment template (text-only)
+# 8 Experiment template (text-only)
 
 Every experiment is a mini research paper. Use this required template in docs/experiment-template.md:
 
-``` # Experiment Title — short tagline
+``` # Experiment Title , short tagline
 - Date:
 - Author:
 - Objective:
@@ -274,7 +274,7 @@ Short text to paste into docs/ops/secrets.md:
 
 Use dedicated lab keys. Never push private keys to git. Place keys in ~/.ssh/lab/, add .gitignore entries, and rotate keys regularly.
 
-# 10 — What to screenshot / demo (make reviewers nod)
+# 10 What to screenshot / demo (make reviewers nod)
 Capture these to make your repo sing:
 
 Topology diagram (SVG/PNG)
