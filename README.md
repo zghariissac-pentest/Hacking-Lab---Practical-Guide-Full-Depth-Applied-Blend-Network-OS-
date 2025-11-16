@@ -1,4 +1,4 @@
-# Hacking-Lab---Practical-Guide-Full-Depth-Applied-Blend-Network-OS
+# Hacking-Lab Practical guide full depth applied-blend-network-OS
 # important : 
 Read this first (please) , before you touch anything here, read the companion theoretical design page. That page explains why every choice is made (isolation, reproducibility, observability, ethics). This document is the how: a safe, practical, reproducible blueprint to build a local lab for learning both network/infrastructure concepts and OS-level security (Linux + Windows mindset) in a fully isolated environment.
 TL;DR: this guide shows you how to build a safe lab for study and research . no exploit payloads, no illegal activity, no shortcuts. If your VM “explodes,” don’t panic , celebrate the snapshot you took.
