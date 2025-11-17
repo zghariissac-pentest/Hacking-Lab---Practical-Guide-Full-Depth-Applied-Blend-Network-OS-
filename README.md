@@ -1,28 +1,20 @@
-# Hacking-Lab Practical guide full depth applied-blend-network-OS
+# Hacking-Lab practical guide full depth applied-blend-network-OS
 # important : 
+
 Read this first (please) , before you touch anything here, read the companion theoretical design page. That page explains why every choice is made (isolation, reproducibility, observability, ethics). This document is the how: a safe, practical, reproducible blueprint to build a local lab for learning both network/infrastructure concepts and OS-level security (Linux + Windows mindset) in a fully isolated environment.
-TL;DR: this guide shows you how to build a safe lab for study and research . no exploit payloads, no illegal activity, no shortcuts. If your VM “explodes,” don’t panic , celebrate the snapshot you took.
+TL;DR: this guide shows you how to build a safe lab for study and research only. If your VM “explodes,” don’t panic , celebrate the snapshot you took.
 
 
 # Table of contents
 Requirements & resource planning
-
-1- Topology & naming conventions (simple)
-
+1- Topology & naming conventions (if i were you i would skip)
 2- Component breakdown: Bastion, Attacker, Targets, Monitoring
-
 3- Docker + Compose starter (safe defaults & snippets)
-
 4- VM option: when to use Vagrant / Packer / Ansible
-
 5- Snapshot strategy, retention, and cleanup policy
-
 6- Observability, artefacts, and naming conventions
-
 7- Experiment template (text-only mini-report)
-
 8- Secrets & OPSEC practical rules
-
 9- What to screenshot / demo for reviewers
 
 # 1 Requirements & resource planning
@@ -40,7 +32,6 @@ Budgeting tip: plan for snapshots and PCAPs; storage fills faster than your will
 # 2 Topology & naming conventions:
 
 Keep names human and IPs private and non-overlapping with your network.
-
 Logical plan (conceptual):
 
 Lab network: 10.200.0.0/24 (lab_net)
